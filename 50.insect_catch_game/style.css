@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+}
+
+body {
+  background-color: #516dff;
+  color: #fff;
+  font-family: 'Press Start 2P', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+.btn {
+  border: 0;
+  background-color: #fff;
+  color: #516dff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 15px 20px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.choose-insect-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  height: 150px;
+  width: 150px;
+}
+
+.choose-insect-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-insect-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-insect-btn img {
+  height: 100px;
+  object-fit: contain;
+  width: 100px;
+}
+
+.game-container {
+  position: relative;
+}
+
+h1 {
+  line-height: 1.4;
+}
+
+.insect {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+  height: 100px;
+  width: 100px;
+}
+
+.insects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.insects-list li {
+  margin: 10px;
+}
+
+.message {
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  line-height: 1.7;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -150%);
+  transition: transform 0.4s ease-in;
+  text-align: center;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.message.visible {
+  opacity: 1;
+  transform: translate(-50%, 150%);
+}
+
+.score {
+  right: 20px;
+}
+
+.screen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  transition: margin 0.5s ease-out;
+  width: 100vw;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.time {
+  left: 20px;
+}
+
+.time,
+.score {
+  position: absolute;
+  top: 20px;
+}
